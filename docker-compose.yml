@@ -1,0 +1,43 @@
+services:
+  database:
+    build: ./database
+    container_name: database
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - '3306:3306'
+    volumes:
+      - mysql_data:/var/lib/mysql
+  
+
+  backend:
+    build: ./backend
+    container_name: backend
+    ports:
+      - '8080:80'
+    depends_on:
+      # No nombre de container_name 
+      # Nombre del servicio
+      - database
+    environment:
+      # = Nombre del Servicio de Base de Datos
+      - DB_HOST=database
+      # = Nombre de Database
+      - DB_NAME=baseDatos
+      # = Nombre de Usuario de Base de Datos
+      - DB_USER=root
+      # = Password de Usuario de Base de Datos
+      - DB_PASS=root
+
+
+  frontend:
+    build: ./frontend
+    container_name: frontend
+    ports:
+      - '8000:80'
+    depends_on:
+      - backend
+
+
+volumes:
+  mysql_data:

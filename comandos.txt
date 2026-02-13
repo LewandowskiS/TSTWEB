@@ -1,0 +1,58 @@
+
+Despues de completar los archivos Dockerfile de cada carpeta
+
+- - - - - - - - - -  - - - -  - -- -  -- 
+
+-----------------------
+construir imagen
+-----------------------
+$ docker build -t backend .       --> Backend Image
+$ docker build -t database .      --> Database Image
+$ docker build -t frontend .      --> FrontEnd Image
+
+-----------------------
+listar imagenes
+-----------------------
+$ docker image ls    
+
+
+
+-----------------------
+Despues crear y completar archivo .yml
+
+te situas en la carpeta raiz (en consola)
+-----------------------
+
+
+-----------------------
+Levantar Contenedor
+-----------------------
+$  docker compose up --build 
+
+OR
+
+$  docker compose up --build -d
+
+
+
+
+
+
+
+
+
+------------- COMANDOS EXTRA Dockerfile
+-- Para quitar todos los contenedores de yml 
+$  docker compose down 
+
+-- Para quitar las imagenes creado por el contenedor
+$ docker compose down --rmi all
+
+-- Para eliminar volumenes 
+$ docker compose down --volumes --rmi all
+
+-- Limpiar Cache
+
+$ docker compose down --volumes --rmi all 
+
+

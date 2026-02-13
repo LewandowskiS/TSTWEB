@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    text-align: center;
+    background-color: purple;
+    color: white;
+}
+
+header img { 
+    display: inline-block;
+    width: 10%;
+}
+
+header h1 {
+    display: inline;
+}
+
+nav {
+    text-align: center;
+    background-color: blueviolet;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    margin: 1%;
+    display: inline;
+
+}
+
+nav ul li a {
+    padding:10px 30px 10px 30px;
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: blueviolet;
+    background-color: white;
+    text-decoration: none;
+}
+
+footer {
+    background-color: blueviolet;
+    color: white;
+}
+
+.tarjeta {
+    height: auto;
+    border: 1px solid gainsboro;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px 0;
+    box-shadow: 0px 4px 8px gainsboro;
+}
+
+.tabla {
+    color: darkgray;
+    text-align: center;
+}
+
+.tabla table {
+    border: 5px solid;
+}
+
+.tabla table thead {
+    color: white;
+    background-color: darkgrey;    
+}
+
+.tabla table td,th {
+    padding: 10px;  
+}
+
+.filastrong {
+    color: white;
+    background-color: darkgray;
+}
+
+.filaimpar {
+    color: grey;
+    background-color: ghostwhite;
+}
+
+.filapar {
+    color: white;
+    background-color: lightgray;
+}
